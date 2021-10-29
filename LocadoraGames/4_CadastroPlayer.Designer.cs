@@ -38,7 +38,7 @@ namespace LocadoraGames
             this.textBoxEndereco = new System.Windows.Forms.TextBox();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridCadastro = new System.Windows.Forms.DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +46,9 @@ namespace LocadoraGames
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonRemover = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             this.labelClose = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCadastro)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,26 +160,26 @@ namespace LocadoraGames
             this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalvar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.buttonSalvar.Location = new System.Drawing.Point(333, 46);
+            this.buttonSalvar.Location = new System.Drawing.Point(333, 58);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(233, 40);
+            this.buttonSalvar.Size = new System.Drawing.Size(233, 30);
             this.buttonSalvar.TabIndex = 20;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
-            // dataGridView1
+            // dataGridCadastro
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridCadastro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCadastro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnNome,
             this.ColumnTelefone,
             this.ColumnEndereco});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 228);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(598, 168);
-            this.dataGridView1.TabIndex = 23;
+            this.dataGridCadastro.Location = new System.Drawing.Point(8, 228);
+            this.dataGridCadastro.Name = "dataGridCadastro";
+            this.dataGridCadastro.Size = new System.Drawing.Size(598, 168);
+            this.dataGridCadastro.TabIndex = 23;
             // 
             // ColumnId
             // 
@@ -210,9 +211,9 @@ namespace LocadoraGames
             this.buttonAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAlterar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.buttonAlterar.Location = new System.Drawing.Point(333, 100);
+            this.buttonAlterar.Location = new System.Drawing.Point(333, 94);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(233, 40);
+            this.buttonAlterar.Size = new System.Drawing.Size(233, 30);
             this.buttonAlterar.TabIndex = 24;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = false;
@@ -223,9 +224,9 @@ namespace LocadoraGames
             this.buttonRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemover.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.buttonRemover.Location = new System.Drawing.Point(333, 156);
+            this.buttonRemover.Location = new System.Drawing.Point(333, 130);
             this.buttonRemover.Name = "buttonRemover";
-            this.buttonRemover.Size = new System.Drawing.Size(233, 40);
+            this.buttonRemover.Size = new System.Drawing.Size(233, 30);
             this.buttonRemover.TabIndex = 26;
             this.buttonRemover.Text = "Remover";
             this.buttonRemover.UseVisualStyleBackColor = false;
@@ -234,7 +235,8 @@ namespace LocadoraGames
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.buttonBuscar);
+            this.panel2.Controls.Add(this.dataGridCadastro);
             this.panel2.Controls.Add(this.buttonAlterar);
             this.panel2.Controls.Add(this.buttonSalvar);
             this.panel2.Controls.Add(this.buttonRemover);
@@ -244,6 +246,19 @@ namespace LocadoraGames
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(620, 410);
             this.panel2.TabIndex = 28;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
+            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.buttonBuscar.Location = new System.Drawing.Point(333, 166);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(233, 30);
+            this.buttonBuscar.TabIndex = 28;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = false;
             // 
             // labelClose
             // 
@@ -279,7 +294,8 @@ namespace LocadoraGames
             this.Name = "CadastroPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroPlayer";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.CadastroPlayer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCadastro)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -298,7 +314,7 @@ namespace LocadoraGames
         private System.Windows.Forms.TextBox textBoxEndereco;
         private System.Windows.Forms.Panel panelEndereco;
         private System.Windows.Forms.Button buttonSalvar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridCadastro;
         private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.Panel panel2;
@@ -307,5 +323,6 @@ namespace LocadoraGames
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEndereco;
+        private System.Windows.Forms.Button buttonBuscar;
     }
 }
