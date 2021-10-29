@@ -67,5 +67,6 @@ namespace LocadoraGames
             //chama a inicialização do form2
             Application.Run(new Form2());
         }
+
     }
 }

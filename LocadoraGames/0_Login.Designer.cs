@@ -33,7 +33,6 @@ namespace LocadoraGames
             this.panelUser = new System.Windows.Forms.Panel();
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.labelClose = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.textBoxPswd = new System.Windows.Forms.TextBox();
             this.panelPswd = new System.Windows.Forms.Panel();
@@ -41,6 +40,7 @@ namespace LocadoraGames
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxPswd = new System.Windows.Forms.PictureBox();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.labelClose = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPswd)).BeginInit();
@@ -88,21 +88,6 @@ namespace LocadoraGames
             this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.button1_Click);
             // 
-            // labelClose
-            // 
-            this.labelClose.AutoSize = true;
-            this.labelClose.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClose.ForeColor = System.Drawing.Color.Teal;
-            this.labelClose.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelClose.Location = new System.Drawing.Point(717, 3);
-            this.labelClose.Name = "labelClose";
-            this.labelClose.Size = new System.Drawing.Size(18, 18);
-            this.labelClose.TabIndex = 7;
-            this.labelClose.Text = "X";
-            this.labelClose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.toolTip1.SetToolTip(this.labelClose, "Fechar");
-            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
-            // 
             // textBoxPswd
             // 
             this.textBoxPswd.AcceptsTab = true;
@@ -142,10 +127,10 @@ namespace LocadoraGames
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::LocadoraGames.Properties.Resources.BMOicon;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(539, 3);
+            this.pictureBoxLogo.Image = global::LocadoraGames.Properties.Resources.BMOGamesIconLeft;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(478, 3);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(116, 149);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(235, 149);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 6;
             this.pictureBoxLogo.TabStop = false;
@@ -171,6 +156,21 @@ namespace LocadoraGames
             this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxUser.TabIndex = 3;
             this.pictureBoxUser.TabStop = false;
+            // 
+            // labelClose
+            // 
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.Color.Teal;
+            this.labelClose.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelClose.Location = new System.Drawing.Point(717, 3);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(18, 18);
+            this.labelClose.TabIndex = 7;
+            this.labelClose.Text = "X";
+            this.labelClose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolTip1.SetToolTip(this.labelClose, "Fechar");
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
             // Form1
             // 
@@ -208,12 +208,12 @@ namespace LocadoraGames
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox textBoxPswd;
         private System.Windows.Forms.PictureBox pictureBoxPswd;
         private System.Windows.Forms.Panel panelPswd;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelClose;
     }
 }
 

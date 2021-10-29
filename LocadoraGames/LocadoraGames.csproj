@@ -46,25 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1_Login.cs">
+    <Compile Include="0_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1_Login.Designer.cs">
-      <DependentUpon>1_Login.cs</DependentUpon>
+    <Compile Include="0_Login.Designer.cs">
+      <DependentUpon>0_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="2_TelaSelecao.cs">
+    <Compile Include="1_TelaSelecao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="2_TelaSelecao.Designer.cs">
-      <DependentUpon>2_TelaSelecao.cs</DependentUpon>
+    <Compile Include="1_TelaSelecao.Designer.cs">
+      <DependentUpon>1_TelaSelecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4_CadastroPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4_CadastroPlayer.Designer.cs">
+      <DependentUpon>4_CadastroPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="1_Login.resx">
-      <DependentUpon>1_Login.cs</DependentUpon>
+    <EmbeddedResource Include="0_Login.resx">
+      <DependentUpon>0_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="2_TelaSelecao.resx">
-      <DependentUpon>2_TelaSelecao.cs</DependentUpon>
+    <EmbeddedResource Include="1_TelaSelecao.resx">
+      <DependentUpon>1_TelaSelecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4_CadastroPlayer.resx">
+      <DependentUpon>4_CadastroPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,9 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GameRoomLogin2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\UserIconBranco1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -103,9 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UserIconAzul11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BMOicon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gameboy1.jpg" />
@@ -130,6 +133,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FolderNewGameWhite-35x351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\night-neon-yellow-technology-vintage-8-bit-Nintendo-GameBoy-DMG-01-darkness-graphics-1920x1200-px-computer-wallpaper-780035.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMOGamesIconLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMOGamesIcon-220x801.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

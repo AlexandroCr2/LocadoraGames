@@ -63,6 +63,56 @@ namespace LocadoraGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BMOGamesIcon_220x80 {
+            get {
+                object obj = ResourceManager.GetObject("BMOGamesIcon-220x80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BMOGamesIcon_220x801 {
+            get {
+                object obj = ResourceManager.GetObject("BMOGamesIcon-220x801", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BMOGamesIconBotton {
+            get {
+                object obj = ResourceManager.GetObject("BMOGamesIconBotton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BMOGamesIconLeft {
+            get {
+                object obj = ResourceManager.GetObject("BMOGamesIconLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BMOGamesIconRight {
+            get {
+                object obj = ResourceManager.GetObject("BMOGamesIconRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BMOicon {
             get {
                 object obj = ResourceManager.GetObject("BMOicon", resourceCulture);
@@ -153,6 +203,16 @@ namespace LocadoraGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gameboy_80x128 {
+            get {
+                object obj = ResourceManager.GetObject("gameboy-80x128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gameboy1 {
             get {
                 object obj = ResourceManager.GetObject("gameboy1", resourceCulture);
@@ -226,6 +286,17 @@ namespace LocadoraGames.Properties {
         internal static System.Drawing.Bitmap NewUserWhite_35x35 {
             get {
                 object obj = ResourceManager.GetObject("NewUserWhite-35x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap night_neon_yellow_technology_vintage_8_bit_Nintendo_GameBoy_DMG_01_darkness_graphics_1920x1200_px_computer_wallpaper_780035 {
+            get {
+                object obj = ResourceManager.GetObject("night-neon-yellow-technology-vintage-8-bit-Nintendo-GameBoy-DMG-01-darkness-graph" +
+                        "ics-1920x1200-px-computer-wallpaper-780035", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +427,26 @@ namespace LocadoraGames.Properties {
         internal static System.Drawing.Bitmap Skyrim2 {
             get {
                 object obj = ResourceManager.GetObject("Skyrim2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextBoxRetangLeve {
+            get {
+                object obj = ResourceManager.GetObject("TextBoxRetangLeve", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextBoxRetangulo {
+            get {
+                object obj = ResourceManager.GetObject("TextBoxRetangulo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

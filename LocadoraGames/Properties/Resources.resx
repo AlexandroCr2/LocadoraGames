@@ -127,14 +127,20 @@
   <data name="Skyrim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Skyrim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HandControllerWhite-40x40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HandControllerWhite-40x40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlayerControllerWhite-45x45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerControllerWhite-45x45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PowerWhite-60x60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PowerWhite-60x60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FolderNewGameWhite-35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FolderNewGameWhite-35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FolderNewGameWhite-35x351" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FolderNewGameWhite-35x351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserIconBranco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserIconBranco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameRoomLogin2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameRoomLogin2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CadeadoAzulIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CadeadoAzulIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,14 +148,14 @@
   <data name="PlayIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PlayIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BMOGamesIconBotton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BMOGamesIconBotton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FolderGamesWhite-55x55" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FolderGamesWhite-55x55.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HandControllerWhite-35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HandControllerWhite-35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gameboy-80x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gameboy-80x128.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HandControllerWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HandControllerWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,11 +163,17 @@
   <data name="Skyrim2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Skyrim2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="night-neon-yellow-technology-vintage-8-bit-Nintendo-GameBoy-DMG-01-darkness-graphics-1920x1200-px-computer-wallpaper-780035" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\night-neon-yellow-technology-vintage-8-bit-Nintendo-GameBoy-DMG-01-darkness-graphics-1920x1200-px-computer-wallpaper-780035.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BMOGamesIcon-220x801" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BMOGamesIcon-220x801.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PowerWhite-55x55" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PowerWhite-55x55.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UserIconBranco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UserIconBranco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlayIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CadeadoBrancoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CadeadoBrancoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,14 +193,26 @@
   <data name="PowerWhite-25x25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PowerWhite-25x25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BMOGamesIconRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BMOGamesIconRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NewUserWhite-35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewUserWhite-35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gameboy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gameboy1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="UserIconAzul11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserIconAzul11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TextBoxRetangLeve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextBoxRetangLeve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PlayerControllerWhite-35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerControllerWhite-35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HandControllerWhite-35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HandControllerWhite-35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HandControllerWhite-60x60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HandControllerWhite-60x60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,14 +220,17 @@
   <data name="PlayerControllerWhite-60x60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerControllerWhite-60x60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UserIconAzul11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UserIconAzul11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BMOGamesIcon-220x80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BMOGamesIcon-220x80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GameRoomLogin2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameRoomLogin2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HandControllerWhite-40x40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HandControllerWhite-40x40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PlayerControllerWhite-45x45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerControllerWhite-45x45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FolderNewGameWhite-35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FolderNewGameWhite-35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BMOGamesIconLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BMOGamesIconLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UserIconAzul1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UserIconAzul1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,7 +241,7 @@
   <data name="BMOicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BMOicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FolderNewGameWhite-35x351" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FolderNewGameWhite-35x351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TextBoxRetangulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextBoxRetangulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
