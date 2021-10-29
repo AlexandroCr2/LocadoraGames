@@ -14,6 +14,7 @@ namespace LocadoraGames
 
     public partial class CadastroPlayer : Form
     {
+
         public CadastroPlayer()
         {
             InitializeComponent();
@@ -24,6 +25,9 @@ namespace LocadoraGames
             atualizarGrid();
             dataGridCadastro.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 10);
         }
+
+        public string id { get; set; }
+        public Color cor = Color.FromArgb(150, 110, 190);
 
         private MySqlConnectionStringBuilder conexaoBanco()
         {
@@ -69,6 +73,11 @@ namespace LocadoraGames
             }
         }
 
+        private void limparGrid()
+        {
+            dataGridCadastro.Rows.Clear();
+        }
+
         private void limparCampos()
         {
             textBoxNome.Text = "Nome do Usuário";
@@ -76,83 +85,54 @@ namespace LocadoraGames
             textBoxEndereco.Text = "Endereço";
         }
 
-        /*private void nomeRepetido()
-         {
-             MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
-             MySqlConnection realizarConexaoBD = new MySqlConnection(conexaoBD.ToString());
-             try
-             {
-                 realizarConexaoBD.Open();
-
-                 MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand();
-                 comandoMySql.CommandText = "SELECT * FROM `player` WHERE nomePlayer = ('" + textBoxNome.Text + "')";
-                 MySqlDataReader reader = comandoMySql.ExecuteReader();
-
-                bool repetido;
-
-                while (reader.Read())
-                 {
-                    MessageBox.Show("não é possível dois usuários com o mesmo nome!");
-
-                    repetido = true;
-                 }
-
-                 realizarConexaoBD.Close();
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("Não foi possível realizar a conexão com o banco de dados!");
-                 Console.WriteLine(ex.Message);
-             }
-         }*/
-
-        private void textBoxNome_Click(object sender, EventArgs e)
+        private void corTB()
         {
-            textBoxNome.Clear();
-            panelNome.BackColor = Color.FromArgb(150, 110, 190);
-            textBoxNome.ForeColor = Color.FromArgb(150, 110, 190);
-
-            panelTelefone.BackColor = Color.LightGray;
-            textBoxTelefone.ForeColor = Color.LightGray;
-
             panelEndereco.BackColor = Color.LightGray;
             textBoxEndereco.ForeColor = Color.LightGray;
-        }
-
-        private void textBoxTelefone_Click(object sender, EventArgs e)
-        {
-            textBoxTelefone.Clear();
-            panelTelefone.BackColor = Color.FromArgb(150, 110, 190);
-            textBoxTelefone.ForeColor = Color.FromArgb(150, 110, 190);
-
-            panelNome.BackColor = Color.LightGray;
-            textBoxNome.ForeColor = Color.LightGray;
-
-            panelEndereco.BackColor = Color.LightGray;
-            textBoxEndereco.ForeColor = Color.LightGray;
-        }
-
-        private void textBoxEndereco_Click(object sender, EventArgs e)
-        {
-            textBoxEndereco.Clear();
-            panelEndereco.BackColor = Color.FromArgb(150,110, 190);
-            textBoxEndereco.ForeColor = Color.FromArgb(150, 110, 190);
 
             panelNome.BackColor = Color.LightGray;
             textBoxNome.ForeColor = Color.LightGray;
 
             panelTelefone.BackColor = Color.LightGray;
             textBoxTelefone.ForeColor = Color.LightGray;
+
         }
 
-        private void buttonSalvar_Click(object sender, EventArgs e)
+        private void confirmacaoPlayer()
         {
-
             MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
             MySqlConnection realizarConexaoBD = new MySqlConnection(conexaoBD.ToString());
             try
             {
+                realizarConexaoBD.Open();
 
+                MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand();
+                comandoMySql.CommandText = "SELECT * FROM `player` WHERE nomePlayer = ('" + textBoxNome.Text + "')";
+                MySqlDataReader reader = comandoMySql.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    MessageBox.Show("Não é possível dois usuários com o mesmo nome!");
+                }
+                else
+                {
+                    novoPlayer();
+                }
+                realizarConexaoBD.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível realizar a conexão com o banco de dados!");
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void novoPlayer()
+        {
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
+            MySqlConnection realizarConexaoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
                 realizarConexaoBD.Open();
 
                 MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand();
@@ -164,7 +144,6 @@ namespace LocadoraGames
                 MessageBox.Show("Salvo com sucesso");
                 atualizarGrid();
                 limparCampos();
-
             }
             catch (Exception ex)
             {
@@ -173,10 +152,155 @@ namespace LocadoraGames
             }
         }
 
+        private void remover()
+        {
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
+            MySqlConnection realizaConexaoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
+                realizaConexaoBD.Open(); //Abre a conexão com o banco
+
+                MySqlCommand comandoMySql = realizaConexaoBD.CreateCommand(); //Crio um comando SQL
+                // "DELETE FROM filme WHERE idFilme = "+ textBoxId.Text +""
+                //comandoMySql.CommandText = "DELETE FROM filme WHERE idFilme = " + tbID.Text + "";
+                comandoMySql.CommandText = "UPDATE `player` SET `ativoPlayer`= 0 WHERE nomePlayer = '" + textBoxNome.Text + "';";
+
+                comandoMySql.ExecuteNonQuery();
+
+                realizaConexaoBD.Close(); // Fecho a conexão com o banco
+                MessageBox.Show("Removido com sucesso!"); //Exibo mensagem de aviso
+                atualizarGrid();
+                limparCampos();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void alterar()
+        {
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
+            MySqlConnection realizaConexaoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
+                realizaConexaoBD.Open(); //Abre a conexão com o banco
+
+                MySqlCommand comandoMySql = realizaConexaoBD.CreateCommand(); //Crio um comando SQL
+                comandoMySql.CommandText = "UPDATE `player` SET `nomePlayer`='" + textBoxNome.Text + "'," +
+                    "`telefonePlayer`='" + textBoxTelefone.Text + "',`enderecoPlayer`='" + textBoxEndereco.Text + "' " +
+                    "WHERE `idPlayer`='" + id + "'";
+
+                comandoMySql.ExecuteNonQuery();
+
+                realizaConexaoBD.Close(); // Fecho a conexão com o banco
+                MessageBox.Show("Atualizado com sucesso!"); //Exibo mensagem de aviso
+                atualizarGrid();
+                limparCampos();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void buscarPlayer()
+        {
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
+            MySqlConnection realizarConexaoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
+                realizarConexaoBD.Open();
+
+                MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand();
+                comandoMySql.CommandText = "SELECT * FROM `player` WHERE nomePlayer LIKE ('%" + textBoxNome.Text + "%')";
+                MySqlDataReader reader = comandoMySql.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    limparGrid();
+                    DataGridViewRow row = (DataGridViewRow)dataGridCadastro.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
+                    row.Cells[0].Value = reader.GetInt32(0);//ID
+                    row.Cells[1].Value = reader.GetString(1);//NOME
+                    row.Cells[2].Value = reader.GetString(2);//TELEFONE
+                    row.Cells[3].Value = reader.GetString(3);//ENDEREÇO
+                    dataGridCadastro.Rows.Add(row);//ADICIONO A LINHA NA TABELA
+                }
+                else
+                {
+                    MessageBox.Show("Não há players relacionados a busca!");
+                }
+                realizarConexaoBD.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível realizar a conexão com o banco de dados!");
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
+        private void dataGridCadastro_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridCadastro.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                limparCampos();
+                dataGridCadastro.CurrentRow.Selected = true;
+                //preenche os textbox com as células da linha selecionada
+                textBoxNome.Text = dataGridCadastro.Rows[e.RowIndex].Cells["columnNome"].FormattedValue.ToString();
+                textBoxTelefone.Text = dataGridCadastro.Rows[e.RowIndex].Cells["columnTelefone"].FormattedValue.ToString();
+                textBoxEndereco.Text = dataGridCadastro.Rows[e.RowIndex].Cells["columnEndereco"].FormattedValue.ToString();
+                id = dataGridCadastro.Rows[e.RowIndex].Cells["columnID"].FormattedValue.ToString();
+            }
+        }
+
+        private void textBoxNome_Click(object sender, EventArgs e)
+        {
+            corTB();
+            textBoxNome.Clear();
+            panelNome.BackColor = cor;
+            textBoxNome.ForeColor = cor;
+        }
+
+        private void textBoxTelefone_Click(object sender, EventArgs e)
+        {
+            corTB();
+            textBoxTelefone.Clear();
+            panelTelefone.BackColor = cor;
+            textBoxTelefone.ForeColor = cor;
+        }
+
+        private void textBoxEndereco_Click(object sender, EventArgs e)
+        {
+            corTB();
+            textBoxEndereco.Clear();
+            panelEndereco.BackColor = cor;
+            textBoxEndereco.ForeColor = cor;
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            confirmacaoPlayer();
+        }
+
+        private void buttonRemover_Click(object sender, EventArgs e)
+        {
+            remover();
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            alterar();
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            buscarPlayer();
+        }
+
         private void labelClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }
