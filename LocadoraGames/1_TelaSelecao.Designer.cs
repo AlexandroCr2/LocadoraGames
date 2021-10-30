@@ -100,6 +100,7 @@ namespace LocadoraGames
             this.buttonCadastroGames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastroGames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCadastroGames.UseVisualStyleBackColor = true;
+            this.buttonCadastroGames.Click += new System.EventHandler(this.buttonCadastroGames_Click);
             this.buttonCadastroGames.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonCadastroGames_MouseMove);
             // 
             // buttonListaGames

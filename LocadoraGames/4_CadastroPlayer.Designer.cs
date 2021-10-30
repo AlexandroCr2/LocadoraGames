@@ -1,7 +1,7 @@
 ﻿
 namespace LocadoraGames
 {
-    partial class CadastroPlayer
+    partial class FormCadastroPlayer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace LocadoraGames
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.panelTelefone = new System.Windows.Forms.Panel();
             this.textBoxNome = new System.Windows.Forms.TextBox();
@@ -52,16 +52,16 @@ namespace LocadoraGames
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCadastro)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Usuário";
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
+            this.labelTitulo.Location = new System.Drawing.Point(12, 22);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(200, 22);
+            this.labelTitulo.TabIndex = 0;
+            this.labelTitulo.Text = "Cadastro de Usuário";
             // 
             // textBoxTelefone
             // 
@@ -283,7 +283,7 @@ namespace LocadoraGames
             this.labelClose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
-            // CadastroPlayer
+            // FormCadastroPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -291,12 +291,11 @@ namespace LocadoraGames
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(751, 502);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CadastroPlayer";
+            this.Name = "FormCadastroPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CadastroPlayer";
             this.Load += new System.EventHandler(this.CadastroPlayer_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -308,7 +307,7 @@ namespace LocadoraGames
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.TextBox textBoxTelefone;
         private System.Windows.Forms.Panel panelTelefone;
         private System.Windows.Forms.TextBox textBoxNome;

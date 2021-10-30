@@ -143,9 +143,19 @@ namespace LocadoraGames
 
         private void buttonCadastroPlayer_Click(object sender, EventArgs e)
         {
-            CadastroPlayer janela = new CadastroPlayer();
+            FormCadastroPlayer janelaCadastroPlayer = new FormCadastroPlayer();
+            janelaCadastroPlayer.TopLevel = false;
+            janelaCadastroPlayer.Visible = true;
+            pictureBox1.Controls.Clear();
+            pictureBox1.Controls.Add(janelaCadastroPlayer);
+        }
+
+        private void buttonCadastroGames_Click(object sender, EventArgs e)
+        {
+            FormCadastroGames janela = new FormCadastroGames();
             janela.TopLevel = false;
             janela.Visible = true;
+            pictureBox1.Controls.Clear();
             pictureBox1.Controls.Add(janela);
         }
     }
