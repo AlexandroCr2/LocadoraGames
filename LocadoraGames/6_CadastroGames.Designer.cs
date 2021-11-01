@@ -35,6 +35,12 @@ namespace LocadoraGames
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.panelNome = new System.Windows.Forms.Panel();
             this.dataGridCadastro = new System.Windows.Forms.DataGridView();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDisponivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonRemover = new System.Windows.Forms.Button();
@@ -46,12 +52,6 @@ namespace LocadoraGames
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxDescricao = new System.Windows.Forms.TextBox();
             this.panelEndereco = new System.Windows.Forms.Panel();
-            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPlataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDisponivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCadastro)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -138,6 +138,42 @@ namespace LocadoraGames
             this.dataGridCadastro.TabIndex = 29;
             this.dataGridCadastro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCadastro_CellClick);
             // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "ID";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.Width = 30;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.Width = 160;
+            // 
+            // ColumnAno
+            // 
+            this.ColumnAno.HeaderText = "Ano";
+            this.ColumnAno.Name = "ColumnAno";
+            this.ColumnAno.Width = 50;
+            // 
+            // ColumnPlataforma
+            // 
+            this.ColumnPlataforma.HeaderText = "Plataforma";
+            this.ColumnPlataforma.Name = "ColumnPlataforma";
+            this.ColumnPlataforma.Width = 80;
+            // 
+            // ColumnDescricao
+            // 
+            this.ColumnDescricao.HeaderText = "Descrição";
+            this.ColumnDescricao.Name = "ColumnDescricao";
+            this.ColumnDescricao.Width = 325;
+            // 
+            // ColumnDisponivel
+            // 
+            this.ColumnDisponivel.HeaderText = "Disp.";
+            this.ColumnDisponivel.Name = "ColumnDisponivel";
+            this.ColumnDisponivel.Width = 40;
+            // 
             // buttonBuscar
             // 
             this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(110)))), ((int)(((byte)(65)))));
@@ -192,6 +228,7 @@ namespace LocadoraGames
             this.labelClose.TabIndex = 27;
             this.labelClose.Text = "X";
             this.labelClose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
             // panel1
             // 
@@ -289,42 +326,6 @@ namespace LocadoraGames
             this.panelEndereco.Name = "panelEndereco";
             this.panelEndereco.Size = new System.Drawing.Size(300, 1);
             this.panelEndereco.TabIndex = 17;
-            // 
-            // ColumnID
-            // 
-            this.ColumnID.HeaderText = "ID";
-            this.ColumnID.Name = "ColumnID";
-            this.ColumnID.Width = 30;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.Width = 160;
-            // 
-            // ColumnAno
-            // 
-            this.ColumnAno.HeaderText = "Ano";
-            this.ColumnAno.Name = "ColumnAno";
-            this.ColumnAno.Width = 50;
-            // 
-            // ColumnPlataforma
-            // 
-            this.ColumnPlataforma.HeaderText = "Plataforma";
-            this.ColumnPlataforma.Name = "ColumnPlataforma";
-            this.ColumnPlataforma.Width = 80;
-            // 
-            // ColumnDescricao
-            // 
-            this.ColumnDescricao.HeaderText = "Descrição";
-            this.ColumnDescricao.Name = "ColumnDescricao";
-            this.ColumnDescricao.Width = 325;
-            // 
-            // ColumnDisponivel
-            // 
-            this.ColumnDisponivel.HeaderText = "Disp.";
-            this.ColumnDisponivel.Name = "ColumnDisponivel";
-            this.ColumnDisponivel.Width = 40;
             // 
             // FormCadastroGames
             // 

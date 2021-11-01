@@ -277,5 +277,10 @@ namespace LocadoraGames
         {
             remover();
         }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace LocadoraGames
 {
-    partial class Form2
+    partial class FormTelaSelecao
     {
         /// <summary>
         /// Required designer variable.
@@ -39,10 +39,10 @@ namespace LocadoraGames
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTopo = new System.Windows.Forms.Panel();
             this.labelHome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCentral = new System.Windows.Forms.PictureBox();
             this.panelButton.SuspendLayout();
             this.panelTopo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCentral)).BeginInit();
             this.SuspendLayout();
             // 
             // panelButton
@@ -60,6 +60,7 @@ namespace LocadoraGames
             this.panelButton.Name = "panelButton";
             this.panelButton.Size = new System.Drawing.Size(220, 582);
             this.panelButton.TabIndex = 0;
+            this.panelButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelButton_MouseMove);
             // 
             // buttonLogout
             // 
@@ -216,16 +217,17 @@ namespace LocadoraGames
             this.labelHome.TabIndex = 0;
             this.labelHome.Text = "HOME";
             // 
-            // pictureBox1
+            // pictureBoxCentral
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = global::LocadoraGames.Properties.Resources.night_neon_yellow_technology_vintage_8_bit_Nintendo_GameBoy_DMG_01_darkness_graphics_1920x1200_px_computer_wallpaper_780035;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(751, 502);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxCentral.BackColor = System.Drawing.Color.Black;
+            this.pictureBoxCentral.Image = global::LocadoraGames.Properties.Resources.night_neon_yellow_technology_vintage_8_bit_Nintendo_GameBoy_DMG_01_darkness_graphics_1920x1200_px_computer_wallpaper_780035;
+            this.pictureBoxCentral.Location = new System.Drawing.Point(220, 80);
+            this.pictureBoxCentral.Name = "pictureBoxCentral";
+            this.pictureBoxCentral.Size = new System.Drawing.Size(751, 502);
+            this.pictureBoxCentral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCentral.TabIndex = 1;
+            this.pictureBoxCentral.TabStop = false;
+            this.pictureBoxCentral.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // Form2
             // 
@@ -233,7 +235,7 @@ namespace LocadoraGames
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(971, 582);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxCentral);
             this.Controls.Add(this.panelTopo);
             this.Controls.Add(this.panelButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -242,7 +244,7 @@ namespace LocadoraGames
             this.panelButton.ResumeLayout(false);
             this.panelTopo.ResumeLayout(false);
             this.panelTopo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCentral)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,6 +261,6 @@ namespace LocadoraGames
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonCadastroGames;
         private System.Windows.Forms.Label labelHome;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxCentral;
     }
 }

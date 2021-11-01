@@ -11,45 +11,36 @@ using System.Windows.Forms;
 
 namespace LocadoraGames
 {
-    public partial class Form2 : Form
+    public partial class FormTelaSelecao : Form
     {
-        //nova thread chamar nova tela
-        Thread novaTela;
+        Thread novaTela; //nova thread chamar nova tela
 
-        public Form2()
+        public FormTelaSelecao() //seta as cores dos paineis topo e logo
         {
             InitializeComponent(); 
             panelLogo.BackColor = Color.FromArgb(10, 10, 15);
             panelTopo.BackColor = Color.FromArgb(35, 35, 55);
         }
 
-        private void fontePadrao()
+        private void fontePadrao() //metodo onde o tamanho da fonte dos buttons fica setada em 9 e a backcolor é setada em Transparent
         {
-            //metodo onde o tamanho da fonte dos buttons fica setada em 9 e a backcolor é setada em RGB(51, 51, 86)
             int velhaFonte = 9;
-
             buttonAluguel.BackColor = Color.Transparent;
             buttonAluguel.Font = new Font(buttonAluguel.Font.FontFamily, velhaFonte);
-
             buttonPlayers.BackColor = Color.Transparent;
             buttonPlayers.Font = new Font(buttonCadastroPlayer.Font.FontFamily, velhaFonte);
-
             buttonCadastroPlayer.BackColor = Color.Transparent;
             buttonCadastroPlayer.Font = new Font(buttonCadastroPlayer.Font.FontFamily, velhaFonte);
-
             buttonListaGames.BackColor = Color.Transparent;
             buttonListaGames.Font = new Font(buttonListaGames.Font.FontFamily, velhaFonte);
-
             buttonCadastroGames.BackColor = Color.Transparent;
             buttonCadastroGames.Font = new Font(buttonCadastroGames.Font.FontFamily, velhaFonte);
-
             buttonLogout.BackColor = Color.Transparent;
             buttonLogout.Font = new Font(buttonLogout.Font.FontFamily, velhaFonte);
         }
 
-        private void buttonLogout_Click(object sender, EventArgs e)
+        private void buttonLogout_Click(object sender, EventArgs e) //botão de logout que chama a tela de login novamente
         {
-            //botão de logout que chama a tela de login novamente
             MessageBox.Show("Logout realizado com sucesso!");
             this.Close();
             novaTela = new Thread(novoForm);
@@ -57,15 +48,13 @@ namespace LocadoraGames
             novaTela.Start();
         }
 
-        private void novoForm()
+        private void novoForm() //chama a inicialização da tela de login
         {
-            //chama a inicialização da tela de login
-            Application.Run(new Form1());
+            Application.Run(new FormLogin());
         }
 
-        private void buttonAluguel_MouseMove(object sender, MouseEventArgs e)
+        private void buttonAluguel_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
             fontePadrao();
             labelHome.Text = buttonAluguel.Text;
             panelLogo.BackColor = Color.FromArgb(0, 50, 43);
@@ -75,9 +64,8 @@ namespace LocadoraGames
             buttonAluguel.Font = new Font(buttonAluguel.Font.FontFamily, novaFonte);
         }
 
-        private void buttonPlayers_MouseMove(object sender, MouseEventArgs e)
+        private void buttonPlayers_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
             fontePadrao();
             labelHome.Text = buttonPlayers.Text;
             panelLogo.BackColor = Color.FromArgb(0, 0, 50);
@@ -85,12 +73,10 @@ namespace LocadoraGames
             buttonPlayers.BackColor = Color.FromArgb(93, 152, 183);
             int novaFonte = 11;
             buttonPlayers.Font = new Font(buttonPlayers.Font.FontFamily, novaFonte);
-
         }
 
-        private void buttonCadastroPlayer_MouseMove(object sender, MouseEventArgs e)
+        private void buttonCadastroPlayer_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
             fontePadrao();
             labelHome.Text = buttonCadastroPlayer.Text;
             panelLogo.BackColor = Color.FromArgb(40, 0, 50);
@@ -100,9 +86,8 @@ namespace LocadoraGames
             buttonCadastroPlayer.Font = new Font(buttonCadastroPlayer.Font.FontFamily, novaFonte);
         }
 
-        private void buttonListaGames_MouseMove(object sender, MouseEventArgs e)
+        private void buttonListaGames_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
             fontePadrao();
             labelHome.Text = buttonListaGames.Text;
             panelLogo.BackColor = Color.FromArgb(60, 16, 14);
@@ -112,9 +97,8 @@ namespace LocadoraGames
             buttonListaGames.Font = new Font(buttonListaGames.Font.FontFamily, novaFonte);
         }
 
-        private void buttonCadastroGames_MouseMove(object sender, MouseEventArgs e)
+        private void buttonCadastroGames_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
             fontePadrao();
             labelHome.Text = buttonCadastroGames.Text;
             panelLogo.BackColor = Color.FromArgb(77, 42, 27);
@@ -124,9 +108,8 @@ namespace LocadoraGames
             buttonCadastroGames.Font = new Font(buttonCadastroGames.Font.FontFamily, novaFonte);
         }
 
-        private void buttonLogout_MouseMove(object sender, MouseEventArgs e)
+        private void buttonLogout_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
             fontePadrao();
             labelHome.Text = buttonLogout.Text;
             panelLogo.BackColor = Color.FromArgb(54, 54, 54);
@@ -136,27 +119,47 @@ namespace LocadoraGames
             buttonLogout.Font = new Font(buttonLogout.Font.FontFamily, novaFonte);
         }
 
-        private void buttonAluguel_Click(object sender, EventArgs e)
+        private void panelButton_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            
+            fontePadrao();
+            labelHome.Text = "HOME";
+            panelLogo.BackColor = Color.FromArgb(10, 10, 15);
+            panelTopo.BackColor = Color.FromArgb(35, 35, 55);
         }
 
-        private void buttonCadastroPlayer_Click(object sender, EventArgs e)
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e) //altera o backcolor dos paineis e do buttom e a fonte do buttom ao passar o mouse sobre ele
         {
-            FormCadastroPlayer janelaCadastroPlayer = new FormCadastroPlayer();
-            janelaCadastroPlayer.TopLevel = false;
-            janelaCadastroPlayer.Visible = true;
-            pictureBox1.Controls.Clear();
-            pictureBox1.Controls.Add(janelaCadastroPlayer);
+            fontePadrao();
+            labelHome.Text = "HOME";
+            panelLogo.BackColor = Color.FromArgb(10, 10, 15);
+            panelTopo.BackColor = Color.FromArgb(35, 35, 55);
         }
 
-        private void buttonCadastroGames_Click(object sender, EventArgs e)
+        private void buttonAluguel_Click(object sender, EventArgs e) // abre o form Aluguel dentro do pictureBoxCentral
+        {
+            FormAluguel janela = new FormAluguel();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            pictureBoxCentral.Controls.Clear();
+            pictureBoxCentral.Controls.Add(janela);
+        }
+
+        private void buttonCadastroPlayer_Click(object sender, EventArgs e) // abre o form Cadastro de Player dentro do pictureBoxCentral
+        {
+            FormCadastroPlayer janela = new FormCadastroPlayer();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            pictureBoxCentral.Controls.Clear();
+            pictureBoxCentral.Controls.Add(janela);
+        }
+
+        private void buttonCadastroGames_Click(object sender, EventArgs e) // abre o form Cadastro de games dentro do pictureBoxCentral
         {
             FormCadastroGames janela = new FormCadastroGames();
             janela.TopLevel = false;
             janela.Visible = true;
-            pictureBox1.Controls.Clear();
-            pictureBox1.Controls.Add(janela);
+            pictureBoxCentral.Controls.Clear();
+            pictureBoxCentral.Controls.Add(janela);
         }
     }
 }
