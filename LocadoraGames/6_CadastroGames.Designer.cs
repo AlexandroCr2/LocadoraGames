@@ -31,7 +31,7 @@ namespace LocadoraGames
         {
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.textBoxAno = new System.Windows.Forms.TextBox();
-            this.panelTelefone = new System.Windows.Forms.Panel();
+            this.panelAno = new System.Windows.Forms.Panel();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.panelNome = new System.Windows.Forms.Panel();
             this.dataGridCadastro = new System.Windows.Forms.DataGridView();
@@ -49,9 +49,9 @@ namespace LocadoraGames
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxPlataforma = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelPlataforma = new System.Windows.Forms.Panel();
             this.textBoxDescricao = new System.Windows.Forms.TextBox();
-            this.panelEndereco = new System.Windows.Forms.Panel();
+            this.panelDescricao = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCadastro)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -86,15 +86,16 @@ namespace LocadoraGames
             this.textBoxAno.TabIndex = 16;
             this.textBoxAno.TabStop = false;
             this.textBoxAno.Text = "Ano";
+            this.textBoxAno.Click += new System.EventHandler(this.textBoxAno_Click);
             // 
-            // panelTelefone
+            // panelAno
             // 
-            this.panelTelefone.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelTelefone.Location = new System.Drawing.Point(56, 151);
-            this.panelTelefone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelTelefone.Name = "panelTelefone";
-            this.panelTelefone.Size = new System.Drawing.Size(92, 1);
-            this.panelTelefone.TabIndex = 14;
+            this.panelAno.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelAno.Location = new System.Drawing.Point(56, 151);
+            this.panelAno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelAno.Name = "panelAno";
+            this.panelAno.Size = new System.Drawing.Size(92, 1);
+            this.panelAno.TabIndex = 14;
             // 
             // textBoxNome
             // 
@@ -112,6 +113,7 @@ namespace LocadoraGames
             this.textBoxNome.TabIndex = 13;
             this.textBoxNome.TabStop = false;
             this.textBoxNome.Text = "Nome do Game";
+            this.textBoxNome.Click += new System.EventHandler(this.textBoxNome_Click);
             // 
             // panelNome
             // 
@@ -255,15 +257,15 @@ namespace LocadoraGames
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.textBoxPlataforma);
-            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panelPlataforma);
             this.panel2.Controls.Add(this.dataGridCadastro);
             this.panel2.Controls.Add(this.textBoxDescricao);
             this.panel2.Controls.Add(this.buttonBuscar);
-            this.panel2.Controls.Add(this.panelEndereco);
+            this.panel2.Controls.Add(this.panelDescricao);
             this.panel2.Controls.Add(this.buttonAlterar);
             this.panel2.Controls.Add(this.textBoxAno);
             this.panel2.Controls.Add(this.buttonSalvar);
-            this.panel2.Controls.Add(this.panelTelefone);
+            this.panel2.Controls.Add(this.panelAno);
             this.panel2.Controls.Add(this.buttonRemover);
             this.panel2.Controls.Add(this.textBoxNome);
             this.panel2.Controls.Add(this.panelNome);
@@ -290,15 +292,16 @@ namespace LocadoraGames
             this.textBoxPlataforma.TabIndex = 31;
             this.textBoxPlataforma.TabStop = false;
             this.textBoxPlataforma.Text = "Plataforma";
+            this.textBoxPlataforma.Click += new System.EventHandler(this.textBoxPlataforma_Click);
             // 
-            // panel3
+            // panelPlataforma
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Location = new System.Drawing.Point(164, 151);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 1);
-            this.panel3.TabIndex = 30;
+            this.panelPlataforma.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelPlataforma.Location = new System.Drawing.Point(164, 151);
+            this.panelPlataforma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelPlataforma.Name = "panelPlataforma";
+            this.panelPlataforma.Size = new System.Drawing.Size(192, 1);
+            this.panelPlataforma.TabIndex = 30;
             // 
             // textBoxDescricao
             // 
@@ -317,15 +320,16 @@ namespace LocadoraGames
             this.textBoxDescricao.TabStop = false;
             this.textBoxDescricao.Text = "Descrição";
             this.textBoxDescricao.WordWrap = false;
+            this.textBoxDescricao.Click += new System.EventHandler(this.textBoxDescricao_Click);
             // 
-            // panelEndereco
+            // panelDescricao
             // 
-            this.panelEndereco.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelEndereco.Location = new System.Drawing.Point(56, 195);
-            this.panelEndereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelEndereco.Name = "panelEndereco";
-            this.panelEndereco.Size = new System.Drawing.Size(300, 1);
-            this.panelEndereco.TabIndex = 17;
+            this.panelDescricao.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelDescricao.Location = new System.Drawing.Point(56, 195);
+            this.panelDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelDescricao.Name = "panelDescricao";
+            this.panelDescricao.Size = new System.Drawing.Size(300, 1);
+            this.panelDescricao.TabIndex = 17;
             // 
             // FormCadastroGames
             // 
@@ -351,7 +355,7 @@ namespace LocadoraGames
 
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.TextBox textBoxAno;
-        private System.Windows.Forms.Panel panelTelefone;
+        private System.Windows.Forms.Panel panelAno;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Panel panelNome;
         private System.Windows.Forms.DataGridView dataGridCadastro;
@@ -363,9 +367,9 @@ namespace LocadoraGames
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxPlataforma;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelPlataforma;
         private System.Windows.Forms.TextBox textBoxDescricao;
-        private System.Windows.Forms.Panel panelEndereco;
+        private System.Windows.Forms.Panel panelDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAno;
