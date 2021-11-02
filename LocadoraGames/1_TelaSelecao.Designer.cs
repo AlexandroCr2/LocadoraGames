@@ -122,6 +122,7 @@ namespace LocadoraGames
             this.buttonListaGames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonListaGames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonListaGames.UseVisualStyleBackColor = true;
+            this.buttonListaGames.Click += new System.EventHandler(this.buttonListaGames_Click);
             this.buttonListaGames.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonListaGames_MouseMove);
             // 
             // buttonCadastroPlayer
@@ -163,6 +164,7 @@ namespace LocadoraGames
             this.buttonPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPlayers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPlayers.UseVisualStyleBackColor = true;
+            this.buttonPlayers.Click += new System.EventHandler(this.buttonPlayers_Click);
             this.buttonPlayers.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonPlayers_MouseMove);
             // 
             // buttonAluguel
@@ -229,7 +231,7 @@ namespace LocadoraGames
             this.pictureBoxCentral.TabStop = false;
             this.pictureBoxCentral.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
-            // Form2
+            // FormTelaSelecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,7 +241,7 @@ namespace LocadoraGames
             this.Controls.Add(this.panelTopo);
             this.Controls.Add(this.panelButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "FormTelaSelecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelButton.ResumeLayout(false);
             this.panelTopo.ResumeLayout(false);

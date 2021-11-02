@@ -161,5 +161,23 @@ namespace LocadoraGames
             pictureBoxCentral.Controls.Clear();
             pictureBoxCentral.Controls.Add(janela);
         }
+
+        private void buttonPlayers_Click(object sender, EventArgs e) // abre o form Cadastro de games dentro do pictureBoxCentral
+        {
+            FormPlayers janela = new FormPlayers();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            pictureBoxCentral.Controls.Clear();
+            pictureBoxCentral.Controls.Add(janela);
+        }
+
+        private void buttonListaGames_Click(object sender, EventArgs e) // abre o form Cadastro de games dentro do pictureBoxCentral
+        {
+            FormListaGames janela = new FormListaGames();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            pictureBoxCentral.Controls.Clear();
+            pictureBoxCentral.Controls.Add(janela);
+        }
     }
 }

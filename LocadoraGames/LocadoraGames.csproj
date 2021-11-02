@@ -120,6 +120,12 @@
     <Compile Include="1_TelaSelecao.Designer.cs">
       <DependentUpon>1_TelaSelecao.cs</DependentUpon>
     </Compile>
+    <Compile Include="3_Players.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_Players.Designer.cs">
+      <DependentUpon>3_Players.cs</DependentUpon>
+    </Compile>
     <Compile Include="4_CadastroPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,12 @@
     <Compile Include="2_FormAluguel.Designer.cs">
       <DependentUpon>2_FormAluguel.cs</DependentUpon>
     </Compile>
+    <Compile Include="5_ListaGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5_ListaGames.Designer.cs">
+      <DependentUpon>5_ListaGames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="0_Login.resx">
@@ -149,8 +161,14 @@
     <EmbeddedResource Include="2_FormAluguel.resx">
       <DependentUpon>2_FormAluguel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="3_Players.resx">
+      <DependentUpon>3_Players.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="4_CadastroPlayer.resx">
       <DependentUpon>4_CadastroPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5_ListaGames.resx">
+      <DependentUpon>5_ListaGames.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="6_CadastroGames.resx">
       <DependentUpon>6_CadastroGames.cs</DependentUpon>

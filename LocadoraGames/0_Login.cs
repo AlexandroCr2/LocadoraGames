@@ -47,7 +47,7 @@ namespace LocadoraGames
 
         private void button1_Click(object sender, EventArgs e) // confere se a senha e o usuário estão corretos
         {
-            if (textBoxUser.Text == "" && textBoxPswd.Text == "") // se estiverem corretos exib a msg abaixo, fecha o formLogin e chama a o metodo novoForm
+            if (textBoxUser.Text == "Digite o Usuário" && textBoxPswd.Text == "Digite a Senha") // se estiverem corretos exib a msg abaixo, fecha o formLogin e chama a o metodo novoForm
             {
                 MessageBox.Show("Login realizado com sucesso!");
                 this.Close();

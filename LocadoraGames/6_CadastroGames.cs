@@ -185,17 +185,20 @@ namespace LocadoraGames
                 comandoMySql.CommandText = "SELECT * FROM `games` WHERE nomeGame LIKE ('%" + textBoxNome.Text + "%')";
                 MySqlDataReader reader = comandoMySql.ExecuteReader(); //executa o comanddo e armazena os dados recebidos em uma variável
 
-                if (reader.Read()) //se a variável retonar dados, os mesmos são inseridos no datagrid
+                if (reader.HasRows) //se a variável retonar dados, os mesmos são inseridos no datagrid
                 {
                     limparGrid();
-                    DataGridViewRow row = (DataGridViewRow)dataGridCadastro.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
-                    row.Cells[0].Value = reader.GetInt32(0);//ID
-                    row.Cells[1].Value = reader.GetString(1);//NOME
-                    row.Cells[2].Value = reader.GetString(2);//ANO
-                    row.Cells[3].Value = reader.GetString(3);//PLATAFORMA
-                    row.Cells[4].Value = reader.GetString(4);//DESCRIÇÃO
-                    row.Cells[5].Value = reader.GetString(5);//DISPONÍVEL
-                    dataGridCadastro.Rows.Add(row);//ADICIONO A LINHA NA TABELA
+                    while (reader.Read())
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridCadastro.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
+                        row.Cells[0].Value = reader.GetInt32(0);//ID
+                        row.Cells[1].Value = reader.GetString(1);//NOME
+                        row.Cells[2].Value = reader.GetString(2);//ANO
+                        row.Cells[3].Value = reader.GetString(3);//PLATAFORMA
+                        row.Cells[4].Value = reader.GetString(4);//DESCRIÇÃO
+                        row.Cells[5].Value = reader.GetString(5);//DISPONÍVEL
+                        dataGridCadastro.Rows.Add(row);//ADICIONO A LINHA NA TABELA
+                    }                                     
                 }
                 else //se a variável não retornar dados a mensagem de erro é exibida
                 {

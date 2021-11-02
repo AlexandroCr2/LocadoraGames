@@ -56,41 +56,44 @@ namespace LocadoraGames
             dataGridGame.Rows.Clear();
         }
 
-        private void buscarPlayer() // busca o player 
+        private void buscarPlayer() //metodo para buscar um cadastro 
         {
-            MySqlConnectionStringBuilder conexaoBD = conexaoBanco(); // chama o metodo conexaoBanco para conectar ao banco de dados
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco(); //chama o metodo para abrir conexão com o banco de dados
             MySqlConnection realizarConexaoBD = new MySqlConnection(conexaoBD.ToString());
             try
             {
-                realizarConexaoBD.Open(); // abre a conexao com o banco de dados
+                realizarConexaoBD.Open(); //abre conexão com o banco de dados
 
-                MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand(); // abre canal para incluir comando no banco de dados
-                comandoMySql.CommandText = "SELECT * FROM `player` WHERE nomePlayer LIKE ('%" + textBoxNome.Text + "%')"; // comando para o banco de dados (busca no banco os caracteres incluidos no textbox
-                MySqlDataReader reader = comandoMySql.ExecuteReader(); // executa o comando no banco de dados
+                MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand(); //cria comando para o bancco de dados
+                comandoMySql.CommandText = "SELECT * FROM `player` WHERE nomePlayer LIKE ('%" + textBoxNome.Text + "%');";
+                MySqlDataReader reader = comandoMySql.ExecuteReader(); //executa leitura dos dados capturados do banco de dados e armazena em uma variavel
 
-                if (reader.Read()) // se retornar um valor, esse valor é atribuido ao datagrid
+                if (reader.HasRows)
                 {
-                    limparGridPlayer(); // chamama o metodo para limpar o datagrid
-                    DataGridViewRow row = (DataGridViewRow)dataGridPlayer.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
-                    row.Cells[0].Value = reader.GetString(1);//NOME
-                    row.Cells[1].Value = reader.GetString(2);//TELEFONE
-                    row.Cells[2].Value = reader.GetString(3);//ENDEREÇO
-
-                    dataGridPlayer.Rows.Add(row);//ADICIONA LINHA NA TABELA
+                    while (reader.Read()) //envia para o datagrid os dados armazenados na variavel que recebeu os dados do banco de dados
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridPlayer.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
+                        row.Cells[0].Value = reader.GetString(1);//NOME
+                        row.Cells[1].Value = reader.GetString(2);//TELEFONE
+                        row.Cells[2].Value = reader.GetString(3);//ENDEREÇO                    
+                        dataGridPlayer.Rows.Add(row);//ADICIONO A LINHA NA TABELA      
+                    }
                 }
-                else // se não retornar valor exibe a mensagem abaixo
+                else
                 {
                     MessageBox.Show("Não há players relacionados a busca!");
                 }
-                realizarConexaoBD.Close(); // fecha a conexao com o banco de dados
+
+                realizarConexaoBD.Close(); //fecha conxao com o banco de dados
+  
             }
-            catch (Exception ex) // se não for possível abrir o banco de dados a mensagem abaixo é exibida
+            catch (Exception ex) //caso não seja possível conectar ao banco de dados a mensagem de excessão abaixo é exibida
             {
                 MessageBox.Show("Não foi possível realizar a conexão com o banco de dados!");
                 Console.WriteLine(ex.Message);
             }
         }
-
+        
         private void buscarGame() // busca o player
         {
             MySqlConnectionStringBuilder conexaoBD = conexaoBanco(); // chama o metodo conexaoBanco para conectar ao banco de dados
@@ -100,22 +103,25 @@ namespace LocadoraGames
                 realizarConexaoBD.Open(); // abre a conexao com o banco de dados
 
                 MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand(); // abre canal para incluir comando no banco de dados
-                comandoMySql.CommandText = "SELECT * FROM `games` WHERE nomeGame LIKE ('%" + textBoxGame.Text + "%') AND ativoGame = 1";  // comando para o banco de dados (busca no banco os caracteres incluidos no textbox
-                MySqlDataReader reader = comandoMySql.ExecuteReader(); // executa o comando no banco de dados
+                comandoMySql.CommandText = "SELECT * FROM `games` WHERE nomeGame LIKE ('%" + textBoxGame.Text + "%') AND ativoGame = 1"; // comando para o banco de dados (busca no banco os caracteres incluidos no textbox
+                MySqlDataReader reader = comandoMySql.ExecuteReader(); // executa a leitura dos dados
 
-                if (reader.Read()) // se retornar um valor, esse valor é atribuido ao datagrid
-                {
-                    limparGridGame(); // chamama o metodo para limpar o datagrid
-                    DataGridViewRow row = (DataGridViewRow)dataGridGame.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
-                    row.Cells[0].Value = reader.GetString(1);//NOME
-                    row.Cells[1].Value = reader.GetString(3);//PLATAFORMA
-                    row.Cells[2].Value = reader.GetString(5);//DISPONIBILIDADE
-                    dataGridGame.Rows.Add(row);//ADICIONO A LINHA NA TABELA
+                if (reader.HasRows)
+                {                    
+                    while (reader.Read())
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridGame.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
+                        row.Cells[0].Value = reader.GetString(1);//NOME
+                        row.Cells[1].Value = reader.GetString(3);//PLATAFORMA
+                        row.Cells[2].Value = reader.GetString(5);//DISPONIBILIDADE
+                        dataGridGame.Rows.Add(row);//ADICIONO A LINHA NA TABELA 
+                    }
                 }
-                else // se não retornar valor exibe a mensagem abaixo
+                else
                 {
                     MessageBox.Show("Não há games relacionados a busca!");
                 }
+
                 realizarConexaoBD.Close(); // fecha a conexao com o banco de dados
             }
             catch (Exception ex) // se não for possível abrir o banco de dados a mensagem abaixo é exibida

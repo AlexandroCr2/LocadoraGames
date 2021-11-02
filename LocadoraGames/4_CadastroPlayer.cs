@@ -276,15 +276,18 @@ namespace LocadoraGames
                 comandoMySql.CommandText = "SELECT * FROM `player` WHERE nomePlayer LIKE ('%" + textBoxNome.Text + "%')";
                 MySqlDataReader reader = comandoMySql.ExecuteReader(); //executa comando e armazena os dados recebidos em uma variável
 
-                if (reader.Read()) //caso a variavel retorne algum valor ele é exibido no datagrid
+                if (reader.HasRows) //verifica se a pesquisa retornou alguma linha
                 {
-                    limparGrid(); //metodo para limpar o datagrid
-                    DataGridViewRow row = (DataGridViewRow)dataGridCadastro.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
-                    row.Cells[0].Value = reader.GetInt32(0);//ID
-                    row.Cells[1].Value = reader.GetString(1);//NOME
-                    row.Cells[2].Value = reader.GetString(2);//TELEFONE
-                    row.Cells[3].Value = reader.GetString(3);//ENDEREÇO
-                    dataGridCadastro.Rows.Add(row);//ADICIONO A LINHA NA TABELA
+                    limparGrid();
+                    while(reader.Read()) //caso a variavel retorne algum valor ele é exibido no datagrid
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridCadastro.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
+                        row.Cells[0].Value = reader.GetInt32(0);//ID
+                        row.Cells[1].Value = reader.GetString(1);//NOME
+                        row.Cells[2].Value = reader.GetString(2);//TELEFONE
+                        row.Cells[3].Value = reader.GetString(3);//ENDEREÇO
+                        dataGridCadastro.Rows.Add(row);//ADICIONO A LINHA NA TABELA
+                    }
                 }
                 else //caso a variavel não retorne nenhum valor a mensagem abaixo é exibida
                 {
