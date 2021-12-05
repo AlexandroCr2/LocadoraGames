@@ -278,6 +278,7 @@ namespace LocadoraGames
             this.Controls.Add(this.panelForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPlayers";
+            this.Load += new System.EventHandler(this.FormPlayers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPlayer)).EndInit();
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();

@@ -13,6 +13,7 @@ namespace LocadoraGames
 {
     public partial class FormPlayers : Form
     {
+
         public FormPlayers()
         {
             InitializeComponent();
@@ -141,6 +142,44 @@ namespace LocadoraGames
         private void labelClose_Click(object sender, EventArgs e)
         { //fecha o form atual
             this.Close();
+        }
+
+        private void FormPlayers_Load(object sender, EventArgs e)
+        {
+            atualizarGrid();
+        }
+
+        private void atualizarGrid()
+        { //método para atualizar o datagrid com as informações do banco de dados
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco(); //chama metodo para abrir conexão com o banco de dados
+            MySqlConnection realizarConexaoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
+                realizarConexaoBD.Open(); //abre conexão com o banco de dados
+
+                MySqlCommand comandoMySql = realizarConexaoBD.CreateCommand(); //cria comando para o banco de dados
+                comandoMySql.CommandText = "SELECT * FROM player WHERE ativoPlayer = 1";
+                MySqlDataReader reader = comandoMySql.ExecuteReader(); //executa comanddo no banco de  e ermazena os dados recebidos em uma variavel
+
+                dataGridPlayer.Rows.Clear(); //limpa as linhas do datagrid
+
+                while (reader.Read()) //executa leitura dos dados armazenados na vaiavel e atualiza o datagrid com os valores
+                {
+                    DataGridViewRow row = (DataGridViewRow)dataGridPlayer.Rows[0].Clone();//FAZ UM CAST E CLONA A LINHA DA TABELA
+                    row.Cells[0].Value = reader.GetInt32(0);//ID
+                    row.Cells[1].Value = reader.GetString(1);//NOME
+                    row.Cells[2].Value = reader.GetString(2);//TELEFONE
+                    row.Cells[3].Value = reader.GetString(3);//ENDEREÇO             
+                    dataGridPlayer.Rows.Add(row);//ADICIONO A LINHA NA TABELA
+                }
+
+                realizarConexaoBD.Close(); //fecha conexao com o banco de dados
+            }
+            catch (Exception ex) //caso não seja possível realizar a conexão com o banco de dados a mensagem de excessão abaixo é exibida
+            {
+                MessageBox.Show("Não foi possível realizar a conexão com o banco de dados!");
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
